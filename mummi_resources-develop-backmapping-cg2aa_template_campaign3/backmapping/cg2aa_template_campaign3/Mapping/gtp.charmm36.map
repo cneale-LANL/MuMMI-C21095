@@ -1,0 +1,82 @@
+[ molecule ]
+GTP
+
+[ martini ]
+PEnd PB PA RB1 RB2 SC1 SC2 SC3 SC4
+
+;                   
+;                   
+;  SC2-------SC1----RB2---RB1---PA---PB--PEnd
+;   |         |
+;  SC3-------SC4
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1    N1   SC3 SC2
+    2    H1   SC3 SC2
+    3    C2   SC2
+    4    N2   SC2
+    5   H21   SC2
+    6   H22   SC2
+    7    N3   SC2 SC2 SC1
+    8    C4   SC2 SC1 SC1
+    9    C5   SC3 SC3 SC4
+   10    C6   SC3
+   11    O6   SC3
+   12    N7   SC3 SC4 SC4 
+   13    C8   SC4 
+   14    H8   SC4
+   15    N9   SC1
+   16   C1'   SC1 SC1 RB1 RB2
+   17   H1'   SC1 SC1 RB1 RB2
+   18   C2'   RB2 RB2 RB2 SC1
+   19  H2''   RB2 RB2 RB2 SC1
+   20   O2'   RB2 RB2 RB2 SC1
+   21   H2'   RB2 RB2 RB2 SC1
+   22   C3'   RB2 RB2 RB2 RB1
+   23  H3''   RB2 RB2 RB2 RB1
+   24   O3'   RB2 RB2 RB2 RB1
+   25   H3'   RB2 RB2 RB2 RB1
+   26   C4'   RB1
+   27   H4'   RB1
+   28   O4'   RB1 RB1 SC1
+   29   C5'   RB1 RB1 PA
+   30   H5'   RB1 RB1 PA
+   31  H5''   RB1 RB1 PA
+   32   O5'   RB1 PA PA
+   33    PA   PA
+   34   O1A   PA
+   35   O2A   PA
+   36   O3A   PA PB
+   37    PB   PB
+   38   O1B   PB
+   39   O2B   PB
+   40   O3B   PB PEnd
+   41    PG   PEnd
+   42   O1G   PEnd
+   43   O2G   PEnd
+   44   O3G   PEnd
+
+[ out ]
+ N2 C2 N1  N3
+H21 N2 C2 H22
+H22 N2 C2 H21
+ H1 N1 C4  C5
+ O6 C6 N1  C5
+ H8 C8 N7  N9
+
+[ out ]
+O2'  C2'  C1'  C3'
+H2'  C2'  C1'  C3'
+O3'  C3'  C2'  C4'
+H3'  C3'  C2'  C4'
+C5'  C4'  C3'  O4'
+
+[ chiral ]
+H1'  C1'  C2'  O4'   N9
+H2'' C2'  O2'  C1'  C3' 
+H3'' C3'  C4'  O3'  C2'
+H4'  C4'  C5'  O4'  C3'
+

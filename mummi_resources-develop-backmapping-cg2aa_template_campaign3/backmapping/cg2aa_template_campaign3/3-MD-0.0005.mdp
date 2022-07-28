@@ -1,0 +1,17 @@
+define                   = -DPOSRES
+integrator               = md
+dt                       = 0.0005
+pbc                      = xyz
+rcoulomb                 = 0.9
+rlist                    = 0.9
+rvdw                     = 0.9
+tcoupl                   = v-rescale
+ref_t                    = 300
+tau_t                    = 0.1
+tc_grps                  = System
+gen_vel                  = yes
+gen_temp                 = 300
+nstxtcout                = 0
+nsteps                   = 1000
+constraints = none
+cutoff_scheme = group

@@ -1,0 +1,179 @@
+; Chris Neale, 2020
+; PAPS
+;
+; CNO-PO4-GL1-D1A-D2A-D3A-D4A-C5A   (sn-2) <- in AA, the SN-2 chain has C23-C220
+;         |
+;         GL2-C1B-C2B-C3B-C4B       (sn-1) <- in AA, the SN-1 chain has C33-C316
+
+[ molecule ]
+PAPS
+
+[ martini ]
+CNO PO4 GL1 GL2 D1A D2A D3A D4A C5A C1B C2B C3B C4B 
+
+[ mapping ]
+charmm27 charmm36 
+
+[ atoms ]
+    1     N   CNO
+    2   HN1   CNO
+    3   HN2   CNO
+    4   HN3   CNO
+    5   C13   CNO
+    6  O13A   CNO
+    7  O13B   CNO
+    8   C12   CNO CNO CNO PO4
+    9  H12A   CNO CNO CNO PO4
+   10   C11   CNO PO4
+   11  H11A   CNO PO4
+   12  H11B   CNO PO4
+   13     P   PO4
+   14   O13   PO4
+   15   O14   PO4
+   16   O12   PO4 PO4 PO4 CNO
+   17   O11   PO4 PO4 GL1
+   18    C1   GL1 GL1 PO4
+   19    HA   GL1 GL1 PO4
+   20    HB   GL1 GL1 PO4
+   21    C2   GL1 GL1 GL2
+   22    HS   GL1 GL1 GL2
+   23   O21   GL1 GL1 GL2 D1A
+   24   C21   GL1 D1A
+   25   O22   GL1
+   26   C22   D1A D1A GL1 
+   27   H2R   D1A D1A GL1
+   28   H2S   D1A D1A GL1
+   29    C3   GL2 GL2 GL2 PO4
+   30    HX   GL2 GL2 GL2 PO4
+   31    HY   GL2 GL2 GL2 PO4
+   32   O31   GL2
+   33   C31   GL2 GL1 C1B
+   34   O32   GL2
+   35   C32   C1B C1B GL2
+   36   H2X   C1B C1B GL2
+   37   H2Y   C1B C1B GL2
+; SN-2 tail
+   38   C23   D1A
+   39   H3R   D1A
+   40   H3S   D1A
+   41   C24   D1A D1A D1A D1A D2A
+   42   H4R   D1A D1A D1A D1A D2A
+   43   H4S   D1A D1A D1A D1A D2A
+   44   C25   D1A D1A D1A D2A D2A
+   45   H5R   D1A D1A D1A D2A D2A
+   46   C26   D1A D1A D2A D2A D2A
+   47   H6R   D1A D1A D2A D2A D2A
+   48   C27   D1A D2A D2A D2A D2A
+   49   H7R   D1A D2A D2A D2A D2A
+   50   H7S   D1A D2A D2A D2A D2A
+   51   C28   D2A D2A D2A D2A D3A
+   52   H8R   D2A D2A D2A D2A D3A
+   53   C29   D2A D2A D2A D3A D3A
+   54   H9R   D2A D2A D2A D3A D3A
+   55  C210   D2A D2A D3A D3A D3A
+   56  H10R   D2A D2A D3A D3A D3A
+   57  H10S   D2A D2A D3A D3A D3A
+   58  C211   D2A D3A D3A D3A D3A
+   59  H11R   D2A D3A D3A D3A D3A
+   60  C212   D3A D3A D3A D3A D4A
+   61  H12R   D3A D3A D3A D3A D4A
+   62  C213   D3A D3A D3A D4A D4A
+   63  H13R   D3A D3A D3A D4A D4A
+   64  H13S   D3A D3A D3A D4A D4A
+   65  C214   D3A D3A D4A D4A D4A
+   66  H14R   D3A D3A D4A D4A D4A
+   67  C215   D3A D4A D4A D4A D4A
+   68  H15R   D3A D4A D4A D4A D4A
+   69  C216   D4A D4A D4A D4A C5A
+   70  H16R   D4A D4A D4A D4A C5A
+   71  H16S   D4A D4A D4A D4A C5A
+   72  C217   D4A D4A D4A C5A C5A
+   73  H17R   D4A D4A D4A C5A C5A
+   74  H17S   D4A D4A D4A C5A C5A
+   75  C218   D4A D4A C5A C5A C5A
+   76  H18R   D4A D4A C5A C5A C5A
+   77  H18S   D4A D4A C5A C5A C5A
+   78  C219   D4A C5A C5A C5A C5A
+   79  H19R   D4A C5A C5A C5A C5A
+   80  H19S   D4A C5A C5A C5A C5A
+   81  C220   C5A
+   82  H20R   C5A
+   83  H20S   C5A
+   84  H20T   C5A
+; SN-1 tail
+   85   C33   C1B
+   86   H3X   C1B
+   87   H3Y   C1B
+   88   C34   C1B C1B C2B
+   89   H4X   C1B C1B C2B
+   90   H4Y   C1B C1B C2B
+   91   C35   C1B C2B
+   92   H5X   C1B C2B
+   93   H5Y   C1B C2B
+   94   C36   C2B C2B C1B
+   95   H6X   C2B C2B C1B
+   96   H6Y   C2B C2B C1B
+   97   C37   C2B 
+   98   H7X   C2B
+   99   H7Y   C2B
+  100   C38   C2B C2B C2B C3B
+  101   H8X   C2B C2B C2B C3B
+  102   H8Y   C2B C2B C2B C3B
+  103   C39   C2B C2B C3B
+  104   H9X   C2B C2B C3B
+  105   H9Y   C2B C2B C3B
+  106  C310   C3B C2B 
+  107  H10X   C3B C2B
+  108  H10Y   C3B C2B
+  109  C311   C3B C3B C2B
+  110  H11X   C3B C3B C2B
+  111  H11Y   C3B C3B C2B
+  112  C312   C3B
+  113  H12X   C3B
+  114  H12Y   C3B
+  115  C313   C3B C3B C4B
+  116  H13X   C3B C3B C4B
+  117  H13Y   C3B C3B C4B
+  118  C314   C4B C3B
+  119  H14X   C4B C3B
+  120  H14Y   C4B C3B
+  121  C315   C4B C4B C3B
+  122  H15X   C4B C4B C3B
+  123  H15Y   C4B C4B C3B
+  124  C316   C4B
+  125  H16X   C4B
+  126  H16Y   C4B
+  127  H16Z   C4B
+
+; glycerol R stereoisomer
+[ chiral ]
+HS C2 O21 C1 C3
+
+; acyl esters
+[ trans ]
+C22 C21 O21 C2
+[ out ]
+O22 C21 O21 C22
+[ trans ]
+C32 C31 O31 C3
+[ out ]
+O32 C31 O31 C32
+
+; Push the PS headgroup apart because N, C13, HN(1,2,3), and O13(A,B) are built in the same place
+[ out ]
+  N  C12  C11  C13
+HN1  C12  C11  C13
+HN2  C12  C11  C13
+HN3  C12  C11  C13
+C13  C12    N  C11
+O13A C12    N  C11
+O13B C12    N  C11
+
+; Push out C11 because it helps with the chirality enforcement
+[ out ]
+C11  C12    N  C13
+
+; Enforce L-chirality in the headgroup
+[ chiral ]
+H12A C12    N  C11  C13
+

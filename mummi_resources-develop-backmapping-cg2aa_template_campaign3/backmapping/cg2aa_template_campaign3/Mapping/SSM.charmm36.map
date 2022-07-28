@@ -1,0 +1,198 @@
+; Chris Neale, 2020
+; SSM
+;
+; NC3-PO4-AM1-T1A-C2A-C3A       (N-linked; sn-2-like) <- in AA, the N-linked / SN-2-like chain has C3F-C18F  
+;         |
+;         AM2-C1B-C2B-C3B-C4B   (D-linked; sn-1-like) <- in AA, the D-linked / SN-1-like chain has C6S-C18S
+
+[ molecule ]
+SSM
+
+[ martini ]
+NC3 PO4 AM1 AM2 T1A C2A C3A C1B C2B C3B C4B 
+
+[ mapping ]
+charmm27 charmm36 
+
+[ atoms ]
+    1     N   NC3
+    2   C12   NC3 NC3 NC3 PO4
+    3   C13   NC3
+    4   C14   NC3
+    5   C15   NC3
+    6  H12A   NC3 NC3 NC3 PO4
+    7  H12B   NC3 NC3 NC3 PO4
+    8  H13A   NC3
+    9  H13B   NC3
+   10  H13C   NC3
+   11  H14A   NC3
+   12  H14B   NC3
+   13  H14C   NC3
+   14  H15A   NC3
+   15  H15B   NC3
+   16  H15C   NC3
+   17   C11   NC3 PO4
+   18  H11A   NC3 PO4
+   19  H11B   NC3 PO4
+   20     P   PO4
+   21   O13   PO4
+   22   O14   PO4
+   23   O12   PO4 PO4 PO4 NC3
+   24   O11   PO4 PO4 AM1
+   25   C1S   AM1 AM1 PO4
+   26   H1S   AM1 AM1 PO4
+   27   H1T   AM1 AM1 PO4
+   28   C2S   AM1 AM1 AM1 AM1 AM2
+   29   H2S   AM1 AM1 AM1 AM1 AM2
+   30    NF   AM2 AM2 AM1
+   31   HNF   AM2 AM2 AM1
+   32   C1F   AM2 AM2 AM2 C1B
+   33    OF   AM2 
+   34   C2F   AM2 C1B
+   35   H2F   AM2 C1B
+   36   H2G   AM2 C1B
+   37   C3S   AM1 AM1 AM1 T1A
+   38   H3S   AM1 AM1 AM1 T1A
+   39    O3   AM1 AM1 AM1 T1A
+   40   HO3   AM1 AM1 AM1 T1A
+   41   C4S   AM1 T1A
+   42   H4S   AM1 T1A
+   43   C5S   AM1 T1A T1A T1A
+   44   H5S   AM1 T1A T1A T1A
+; N-linked (sn-2-like) tail
+   45   C3F   C1B
+   46   H3F   C1B
+   47   H3G   C1B
+   48   C4F   C1B C1B C2B
+   49   H4F   C1B C1B C2B
+   50   H4G   C1B C1B C2B
+   51   C5F   C1B C2B
+   52   H5F   C1B C2B
+   53   H5G   C1B C2B
+   54   C6F   C1B C2B C2B
+   55   H6F   C1B C2B C2B
+   56   H6G   C1B C2B C2B
+   57   C7F   C2B
+   58   H7F   C2B
+   59   H7G   C2B
+   60   C8F   C2B C2B C2B C3B
+   61   H8F   C2B C2B C2B C3B
+   62   H8G   C2B C2B C2B C3B
+   63   C9F   C2B C2B C3B
+   64   H9F   C2B C2B C3B
+   65   H9G   C2B C2B C3B
+   66   C10F  C2B C3B
+   67   H10F  C2B C3B
+   68   H10G  C2B C3B
+   69   C11F  C2B C3B C3B
+   70   H11F  C2B C3B C3B
+   71   H11G  C2B C3B C3B
+   72   C12F  C3B
+   73   H12F  C3B
+   74   H12G  C3B
+   75   C13F  C3B C3B C4B
+   76   H13F  C3B C3B C4B
+   77   H13G  C3B C3B C4B
+   78   C14F  C3B C4B
+   79   H14F  C3B C4B
+   80   H14G  C3B C4B
+   81   C15F  C3B C4B C4B
+   82   H15F  C3B C4B C4B
+   83   H15G  C3B C4B C4B
+   84   C16F  C4B
+   85   H16F  C4B
+   86   H16G  C4B
+   87   C17F  C4B
+   88   H17F  C4B
+   89   H17G  C4B
+   90   C18F  C4B
+   91   H18F  C4B
+   92   H18G  C4B
+   93   H18H  C4B
+; D-linked (sn-1-like) tail
+   94   C6S   T1A
+   95   H6S   T1A
+   96   H6T   T1A
+   97   C7S   T1A T1A T1A T1A C2A
+   98   H7S   T1A T1A T1A T1A C2A
+   99   H7T   T1A T1A T1A T1A C2A
+  100   C8S   T1A T1A T1A C2A C2A
+  101   H8S   T1A T1A T1A C2A C2A
+  102   H8T   T1A T1A T1A C2A C2A
+  103   C9S   T1A T1A C2A C2A C2A
+  104   H9S   T1A T1A C2A C2A C2A
+  105   H9T   T1A T1A C2A C2A C2A
+  106  C10S   T1A C2A C2A C2A C2A
+  107  H10S   T1A C2A C2A C2A C2A
+  108  H10T   T1A C2A C2A C2A C2A
+  109  C11S   C2A
+  110  H11S   C2A
+  111  H11T   C2A
+  112  C12S   C2A C2A C2A C2A C3A
+  113  H12S   C2A C2A C2A C2A C3A
+  114  H12T   C2A C2A C2A C2A C3A
+  115  C13S   C2A C2A C2A C3A C3A
+  116  H13S   C2A C2A C2A C3A C3A
+  117  H13T   C2A C2A C2A C3A C3A
+  118  C14S   C2A C2A C3A C3A C3A
+  119  H14S   C2A C2A C3A C3A C3A
+  120  H14T   C2A C2A C3A C3A C3A
+  121  C15S   C2A C3A C3A C3A C3A
+  122  H15S   C2A C3A C3A C3A C3A
+  123  H15T   C2A C3A C3A C3A C3A
+  124  C16S   C3A 
+  125  H16S   C3A 
+  126  H16T   C3A 
+  127  C17S   C3A
+  128  H17S   C3A
+  129  H17T   C3A
+  130  C18S   C3A
+  131  H18S   C3A
+  132  H18T   C3A
+  133  H18U   C3A
+
+; SSM backbone
+[ out ]
+O3   C3S C2S C4S
+HO3  C3S C2S C4S
+; does not seem like a good idea to push out anything bound to the C2S chiral center
+
+[ chiral ]
+H2S C2S C3S  NF C1S
+H3S C3S C2S C4S  O3
+
+; Push out the choline headgroup because N, C13, C14, C15 are built in the same place
+[ out ]
+C13  N C12 C14 C15
+H13A N C12 C14 C15
+H13B N C12 C14 C15
+H13C N C12 C14 C15
+C14  N C12 C13 C15
+H14A N C12 C13 C15
+H14B N C12 C13 C15
+H14C N C12 C13 C15
+C15  N C12 C13 C14
+H15A N C12 C13 C14
+H15B N C12 C13 C14
+H15C N C12 C13 C14
+
+; Extend C17 and C18 on D-erythro (like sn-1)
+[ trans ]
+C17S C16S C15S C14S
+H17S C16S C15S C14S
+H17T C16S C15S C14S
+C18S C17S C16S C15S
+H18S C17S C16S C15S
+H18T C17S C16S C15S
+H18U C17S C16S C15S
+
+; Extend C17 and C18 on N-steroyl (like sn-2)
+[ trans ]
+C17F C16F C15F C14F
+H17F C16F C15F C14F
+H17G C16F C15F C14F
+C18F C17F C16F C15F
+H18F C17F C16F C15F
+H18G C17F C16F C15F
+H18H C17F C16F C15F
+

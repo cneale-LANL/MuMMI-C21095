@@ -1,0 +1,39 @@
+THESE ARE NOTES FROM CHRIS NEALE TO HIMSELF ABOUT THINGS THAT REMAIN TO BE DONE
+
+- add an actual check based on the MAXIMUM_RESTRAINT_UNSATISFACTION and mark runs as a failure if they fail that test
+  - could also make a subset posre .itp file that is used to test the really critical parts also in success.gro
+    since it should be OK for SC to rearrange after restratints are removed, but we want the secondary structure elements to not fall apart
+
+- rebalance the charge by removing some ions far from the protein (changed the PIP2 charge)
+
+- Ring penetration: Charmm gui does this via findrings.py and pentest.py 
+    - quoting charmm-gui: "The protein surface penetration check finds the lipid tails that go beyond the protein surface, and the lipid ring penetration check
+                          detects the lipid tails that pass through the cyclic groups (e.g., cholesterol ring) in the simulation systems. Energy minimization 
+                          can resolve many of these bad contacts, but one might need to visually check the following lipid molecules to ensure the following 
+                          contacts are resolved. The user can regenerate the lipid bilayer if necessary."
+    - algorithm is described here: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4165794/
+
+- If there is a "molecule" that is actually multiple segments (like ras+raf) then I'm going to get spurious detection of omega cis
+    - this is fixed, but only by ignoring CYF-*, NMA-* and *-ACE pairs. If the proteins are not capped like this then this script deck
+      will still get spurious detection of "problems" that are not really a problem
+
+- add some tests that the build has worked
+  - RMSD to template, + max RMSdev per residue. Want to know if a side chain got trapped between two beta strands during the build
+
+- careful of histidine protonation, both in generation of the toplogy for the run and also in the distance restraint file
+
+- water around GTP and Mg2+ (1st solvation shell of Mg2+ should be full)
+  - has been addressed by simply adding these waters -- need to check if that is the desired approach
+
+- water in the protein core? -- is it reasonable? Not checked.
+
+- check lipid parameters and overall force field. Right now, I just imported some definitions from charmm-gui output
+  - note that I made modifications to the C-linked dihedral parameters for SSM (involving X-NHL-C-X proper dihedrals, as taken from protein backbone)
+  - the goal of this script deck is to provide output configurations for the AA simulations, not to prepare the AA simulations.
+    Therefore, the onus of ensuring parameter correctness is not on this script deck and needs to be handled separately
+
+- check that chirality requirements are actually correct 
+  - for pip2 and cholesterol, I just looked at structural averaged from a charmm-gui build and enforced those. 
+    Presumably I could change anything, but at least it needs to be verified
+
+

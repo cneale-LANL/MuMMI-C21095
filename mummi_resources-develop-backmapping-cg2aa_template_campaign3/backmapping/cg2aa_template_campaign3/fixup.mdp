@@ -1,0 +1,11 @@
+define=-DFLEXIBLE
+integrator=steep
+nsteps=500
+emstep=0.001
+pbc=xyz
+cutoff_scheme=group
+nstxout=0
+rcoulomb=0.9
+rlist=0.9
+rvdw=0.9
+constraints=none

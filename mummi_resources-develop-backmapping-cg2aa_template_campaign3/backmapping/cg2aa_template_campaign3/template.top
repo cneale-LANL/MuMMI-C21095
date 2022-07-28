@@ -1,0 +1,34 @@
+; Include forcefield parameters
+#include "charmm36-jun2015_DOE_2016_Dec20_martinimod_March2020_addCYP_April2021.ff/forcefield.itp"
+#include "POPC_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "PAPC_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "POPE_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "DIPE_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "SSM_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "CHL1_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "PAPS_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "SAPI_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "protein_ras_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "protein_rascraf_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "protein_ras4A_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+#include "protein_ras4Acraf_CN_MARTINI_BACKMAPPING_ENFORCE.itp"
+
+; Include water topology
+#include "charmm36-jun2015_DOE_2016_Dec20_martinimod_March2020_addCYP_April2021.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "charmm36-jun2015_DOE_2016_Dec20_martinimod_March2020_addCYP_April2021.ff/ions.itp"
+
+[ system ]
+; Name
+CGtoAAfromCampaign3
+
+[ molecules ]
+; Compound        #mols

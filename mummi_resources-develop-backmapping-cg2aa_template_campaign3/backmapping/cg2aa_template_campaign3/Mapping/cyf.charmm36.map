@@ -1,0 +1,88 @@
+[ molecule ]
+CYF
+
+[ martini ]
+BB SC1 SC2 SC3 SC4 SC5
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1     N    BB
+    2    HN    BB
+    3    CA    BB
+    3    HA    BB
+    4    CB   SC1 BB
+    5   HB1   SC1 BB
+    6   HB2   SC1 BB
+    7    SG   SC1
+    8    CJ   SC2 SC1
+    9   HJ1   SC2 SC1
+   10   HJ2   SC2 SC1
+   11    CK   SC2 SC1
+   12    HK   SC2 SC1
+   13    CL   SC2
+   14    CM   SC2
+   15   HM1   SC2
+   16   HM2   SC2
+   17   HM3   SC2
+   18    CN   SC3 SC2
+   19   HN1   SC3 SC2
+   20   HN2   SC3 SC2
+   21    CO   SC3 SC2
+   22   HO1   SC3 SC2
+   23   HO2   SC3
+   24    CP   SC3
+   25    HP   SC3
+   26    CQ   SC4 SC3
+   27    CR   SC4 SC3
+   28   HR1   SC4 SC3
+   29   HR2   SC4 SC3
+   30   HR3   SC4 SC3
+   31    CS   SC4
+   32   HS1   SC4
+   33   HS2   SC4
+   34    CU   SC4
+   35   HU1   SC4
+   36   HU2   SC4
+   37    CV   SC5 SC4
+   38    HV   SC5 SC4
+   39    CW   SC5 SC4
+   40    CX   SC5 SC4
+   41   HX1   SC5 SC4
+   42   HX2   SC5 SC4
+   43   HX3   SC5 SC4
+   44    CY   SC5
+   45   HY1   SC5
+   46   HY2   SC5
+   47   HY3   SC5
+   48     C    BB
+   49   OT1    BB
+   50   OT2    BB
+   51    CT    BB
+   52   HT1    BB
+   53   HT2    BB
+   54   HT3    BB
+
+; removing these for CYF causes issues with placement of the OT1/OT2/CT groups, so just leave them in
+[ chiral ]
+  CB     CA    N    C
+  HB1    CA    N    C
+  HB2    CA    N    C
+
+[ chiral ]
+  HA     CA    N    CB    C ; L-Cys
+; HA     CA    N    C    CB ; D-Cys
+
+[ out ]
+  OT1     C   CA 
+  OT2     C   CA 
+   CT     C   CA 
+  HT1     C   CA 
+  HT2     C   CA 
+  HT3     C   CA 
+
+[ cis ]
+CM CL CK HK
+CR CQ CP HP 
+

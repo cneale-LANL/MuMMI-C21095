@@ -1,0 +1,11 @@
+[ molecule ]
+ZN
+
+[ martini ]
+ZN
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1    ZN    ZN

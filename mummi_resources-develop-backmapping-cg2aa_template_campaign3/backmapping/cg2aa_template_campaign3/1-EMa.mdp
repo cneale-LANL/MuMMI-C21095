@@ -1,0 +1,17 @@
+define=-DFLEXIBLE 
+integrator=steep
+nsteps=500
+emstep=0.001
+pbc=xyz
+cutoff_scheme=group
+; Table extension is needed initially 
+table-extension=2
+; During first steps nonbonded interactions
+; are excluded within groups membrane
+energygrps=Protein Membrane Solvent
+energygrp_excl=Membrane Membrane
+nstxout=0
+rcoulomb=0.6
+rlist=0.6
+rvdw=0.6
+constraints=none

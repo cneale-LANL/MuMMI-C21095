@@ -1,0 +1,1 @@
+The main script to submit is one of the dorun*.sh files, which prepares files and calls sinceCG.sh

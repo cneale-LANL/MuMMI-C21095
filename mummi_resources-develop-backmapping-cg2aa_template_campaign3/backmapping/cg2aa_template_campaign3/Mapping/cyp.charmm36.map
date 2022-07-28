@@ -1,0 +1,87 @@
+[ molecule ]
+CYP
+
+[ martini ]
+BB SC1 SC2 SC3 SC4 SC5
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1     N    BB
+    2    HN    BB
+    3    CA    BB
+    4    HA    BB
+    5    CB   SC1 BB
+    6   HB1   SC1 BB
+    7   HB2   SC1 BB
+    8    SG   SC1
+    9    C1   SC1 SC2
+   10    O1   SC1 SC2
+   11    C2   SC1 SC2 SC2
+   12   H21   SC1 SC2 SC2
+   13   H22   SC1 SC2 SC2
+   14    C3   SC2
+   15   H31   SC2
+   16   H32   SC2
+   17    C4   SC2 SC2 SC3
+   18   H41   SC2 SC2 SC3
+   19   H42   SC2 SC2 SC3
+   20    C5   SC2 SC3
+   21   H51   SC2 SC3
+   22   H52   SC2 SC3
+   23    C6   SC3 SC3 SC2
+   24   H61   SC3 SC3 SC2
+   25   H62   SC3 SC3 SC2
+   26    C7   SC3 
+   27   H71   SC3
+   28   H72   SC3
+   29    C8   SC3 SC3 SC3 SC4
+   30   H81   SC3 SC3 SC3 SC4
+   31   H82   SC3 SC3 SC3 SC4
+   32    C9   SC3 SC3 SC4
+   33   H91   SC3 SC3 SC4
+   34   H92   SC3 SC3 SC4
+   35   C10   SC4 SC3 
+   36  H101   SC4 SC3
+   37  H102   SC4 SC3
+   38   C11   SC4 SC4 SC3
+   39  H111   SC4 SC4 SC3
+   40  H112   SC4 SC4 SC3
+   41   C12   SC4
+   42  H121   SC4
+   43  H122   SC4
+   44   C13   SC4 SC4 SC5
+   45  H131   SC4 SC4 SC5
+   46  H132   SC4 SC4 SC5
+   47   C14   SC5 SC4
+   48  H141   SC5 SC4
+   49  H142   SC5 SC4
+   50   C15   SC5 SC5 SC4
+   51  H151   SC5 SC5 SC4
+   52  H152   SC5 SC5 SC4
+   53   C16   SC5
+   54  H161   SC5
+   55  H162   SC5
+   56  H163   SC5
+   57     C    BB
+   58     O    BB
+
+;[ chiral ]
+;  CB     CA    N    C
+;  HB1    CA    N    C
+;  HB2    CA    N    C
+
+[ chiral ]
+  HA     CA    N    CB    C ; L-Cys
+; HA     CA    N    C    CB ; D-Cys
+
+[ out ]
+  O1     C1    SG   C2
+
+; acyl thioester
+[ trans ]
+C2  C1  SG  CB
+[ out ]
+O1  C1  SG  C2
+

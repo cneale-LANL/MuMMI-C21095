@@ -1,0 +1,17 @@
+[ molecule ]
+ACE
+
+[ martini ]
+BB 
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1    CA    BB
+    2   HH31   BB
+    3   HH32   BB
+    4   HH33   BB
+    5    C     BB
+    6    O     BB
+

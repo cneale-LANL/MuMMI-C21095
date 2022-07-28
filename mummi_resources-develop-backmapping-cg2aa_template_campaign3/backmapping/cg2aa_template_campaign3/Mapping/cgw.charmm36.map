@@ -1,0 +1,14 @@
+[ molecule ]
+CGW
+
+[ martini ]
+CGW
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1    OW   CGW
+    2   HW1   CGW
+    3   HW2   CGW
+

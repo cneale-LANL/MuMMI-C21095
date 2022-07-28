@@ -1,0 +1,255 @@
+; Chris Neale, 2020
+; SAPI
+;
+; (P4,P5,C2,C3)-C1-PO4-GL1-D1A-D2A-D3A-D4A-C5A   (sn-2) <- in AA, the SN-2 chain has C23-C220
+;                      |
+;                      GL2-C1B-C2B-C3B-C4B       (sn-1) <- in AA, the SN-1 chain has C33-C318
+
+[ molecule ]
+SAPI
+
+[ martini ]
+P4 P5 C2 C3 C1 PO4 GL1 GL2 D1A D2A D3A D4A C5A C1B C2B C3B C4B 
+
+[ mapping ]
+charmm27 charmm36 
+
+[ atoms ]
+; the C14 and C15 atoms should be between the C2 and C3 beads so that the C14 and C15 can both most easily reach the P4 and P5 phosphate beads
+; however, I am not sure if there is a prefered direction to go around the ring
+
+;; this is an alternate way to go around the ring -- could use it instead, though I don't know how to tell which one is better
+;; the difference is swap all C2 with C3
+;    1   C11   C1 C1 C3
+;    2    H1   C1 C1 C3
+;    3   C12   C1 C1 C2
+;    4    H2   C1 C1 C2
+;    5    O2   C1 C1 C2
+;    6   HO2   C1 C1 C2
+;    7   C13   C1 C2 C2
+;    8    H3   C1 C2 C2
+;    9    O3   C1 C2 C2
+;   10   HO3   C1 C2 C2
+;   11   C14   C2 C2 C3
+;   12    H4   C2 C2 C3
+;   13   C15   C2 C3 C3
+;   14    H5   C2 C3 C3
+;   15   C16   C3 C3 C1
+;   16    H6   C3 C3 C1
+;   17    O6   C3 C3 C1
+
+    1   C11   C1 C1 C2
+    2    H1   C1 C1 C2
+    3   C12   C1 C1 C3
+    4    H2   C1 C1 C3
+    5    O2   C1 C1 C3
+    6   HO2   C1 C1 C3
+    7   C13   C1 C3 C3
+    8    H3   C1 C3 C3
+    9    O3   C1 C3 C3
+   10   HO3   C1 C3 C3
+   11   C14   C3 C3 C2
+   12    H4   C3 C3 C2
+   13   C15   C3 C2 C2
+   14    H5   C3 C2 C2
+   15   C16   C2 C2 C1
+   16    H6   C2 C2 C1
+   17    O6   C2 C2 C1
+
+   18    O4   P4
+   19    P4   P4
+   20  OP42   P4
+   21  OP43   P4
+   22  OP44   P4
+   23    O5   P5
+   24    P5   P5
+   25  OP52   P5
+   26  HP52   P5
+   27  OP53   P5
+   28  OP54   P5
+   29     P   PO4
+   30   O13   PO4
+   31   O14   PO4
+   32   O12   PO4 PO4 PO4 C1
+   33   O11   PO4 PO4 GL1
+   34    C1   GL1 GL1 PO4
+   35    HA   GL1 GL1 PO4
+   36    HB   GL1 GL1 PO4
+   37    C2   GL1 GL1 GL2
+   38    HS   GL1 GL1 GL2
+   39   O21   GL1 GL1 GL2 D1A
+   40   C21   GL1 D1A
+   41   O22   GL1
+   42   C22   D1A D1A GL1 
+   43   H2R   D1A D1A GL1
+   44   H2S   D1A D1A GL1
+   45    C3   GL2 GL2 GL2 PO4
+   46    HX   GL2 GL2 GL2 PO4
+   47    HY   GL2 GL2 GL2 PO4
+   48   O31   GL2
+   49   C31   GL2 GL1 C1B
+   50   O32   GL2
+   51   C32   C1B C1B GL2
+   52   H2X   C1B C1B GL2
+   53   H2Y   C1B C1B GL2
+; SN-2 tail
+   54   C23   D1A
+   55   H3R   D1A
+   56   H3S   D1A
+   57   C24   D1A D1A D1A D1A D2A
+   58   H4R   D1A D1A D1A D1A D2A
+   59   H4S   D1A D1A D1A D1A D2A
+   60   C25   D1A D1A D1A D2A D2A
+   61   H5R   D1A D1A D1A D2A D2A
+   62   C26   D1A D1A D2A D2A D2A
+   63   H6R   D1A D1A D2A D2A D2A
+   64   C27   D1A D2A D2A D2A D2A
+   65   H7R   D1A D2A D2A D2A D2A
+   66   H7S   D1A D2A D2A D2A D2A
+   67   C28   D2A D2A D2A D2A D3A
+   68   H8R   D2A D2A D2A D2A D3A
+   69   C29   D2A D2A D2A D3A D3A
+   70   H9R   D2A D2A D2A D3A D3A
+   71  C210   D2A D2A D3A D3A D3A
+   72  H10R   D2A D2A D3A D3A D3A
+   73  H10S   D2A D2A D3A D3A D3A
+   74  C211   D2A D3A D3A D3A D3A
+   75  H11R   D2A D3A D3A D3A D3A
+   76  C212   D3A D3A D3A D3A D4A
+   77  H12R   D3A D3A D3A D3A D4A
+   78  C213   D3A D3A D3A D4A D4A
+   79  H13R   D3A D3A D3A D4A D4A
+   80  H13S   D3A D3A D3A D4A D4A
+   81  C214   D3A D3A D4A D4A D4A
+   82  H14R   D3A D3A D4A D4A D4A
+   83  C215   D3A D4A D4A D4A D4A
+   84  H15R   D3A D4A D4A D4A D4A
+   85  C216   D4A D4A D4A D4A C5A
+   86  H16R   D4A D4A D4A D4A C5A
+   87  H16S   D4A D4A D4A D4A C5A
+   88  C217   D4A D4A D4A C5A C5A
+   89  H17R   D4A D4A D4A C5A C5A
+   90  H17S   D4A D4A D4A C5A C5A
+   91  C218   D4A D4A C5A C5A C5A
+   92  H18R   D4A D4A C5A C5A C5A
+   93  H18S   D4A D4A C5A C5A C5A
+   94  C219   D4A C5A C5A C5A C5A
+   95  H19R   D4A C5A C5A C5A C5A
+   96  H19S   D4A C5A C5A C5A C5A
+   97  C220   C5A
+   98  H20R   C5A
+   99  H20S   C5A
+  100  H20T   C5A
+; SN-1 tail
+  101   C33   C1B
+  102   H3X   C1B
+  103   H3Y   C1B
+  104   C34   C1B C1B C2B
+  105   H4X   C1B C1B C2B
+  106   H4Y   C1B C1B C2B
+  107   C35   C1B C2B
+  108   H5X   C1B C2B
+  109   H5Y   C1B C2B
+  110   C36   C2B C2B C1B
+  111   H6X   C2B C2B C1B
+  112   H6Y   C2B C2B C1B
+  113   C37   C2B 
+  114   H7X   C2B
+  115   H7Y   C2B
+  116   C38   C2B C2B C2B C3B
+  117   H8X   C2B C2B C2B C3B
+  118   H8Y   C2B C2B C2B C3B
+  119   C39   C2B C2B C3B
+  120   H9X   C2B C2B C3B
+  121   H9Y   C2B C2B C3B
+  122  C310   C3B C2B 
+  123  H10X   C3B C2B
+  124  H10Y   C3B C2B
+  125  C311   C3B C3B C2B
+  126  H11X   C3B C3B C2B
+  127  H11Y   C3B C3B C2B
+  128  C312   C3B
+  129  H12X   C3B
+  130  H12Y   C3B
+  131  C313   C3B C3B C4B
+  132  H13X   C3B C3B C4B
+  133  H13Y   C3B C3B C4B
+  134  C314   C4B C3B
+  135  H14X   C4B C3B
+  136  H14Y   C4B C3B
+  137  C315   C4B C4B C3B
+  138  H15X   C4B C4B C3B
+  139  H15Y   C4B C4B C3B
+  140  C316   C4B
+  141  H16X   C4B
+  142  H16Y   C4B
+  143  C317   C4B
+  144  H17X   C4B
+  145  H17Y   C4B
+  146  C318   C4B
+  147  H18X   C4B
+  148  H18Y   C4B
+  149  H18Z   C4B
+
+; glycerol R stereoisomer
+[ chiral ]
+HS C2 O21 C1 C3
+
+; acyl esters
+[ trans ]
+C22 C21 O21 C2
+[ out ]
+O22 C21 O21 C22
+[ trans ]
+C32 C31 O31 C3
+[ out ]
+O32 C31 O31 C32
+
+; Extend C17 and C18 on sn-1 steroyl because C16, C17, and C18 are built in the same place
+[ trans ]
+C317 C316 C315 C314
+H17X C316 C315 C314
+H17Y C316 C315 C314
+C318 C317 C316 C315
+H18X C317 C316 C315
+H18Y C317 C316 C315
+H18Z C317 C316 C315
+
+; PIP2 headgroup chirality
+[out]
+O12 C11 C16 C12
+[chiral]
+H1 C11 O12 C16 C12
+[out]
+O2  C12 C11 C13
+HO2  C12 C11 C13
+[chiral]
+H2 C12 C11 C13  O2
+[out]
+O3  C13 C12 C14
+HO3  C13 C12 C14
+[chiral]
+H3 C13 C12 C14  O3
+[out]
+O4  C14 C13 C15
+P4  C14 C13 C15
+OP42  C14 C13 C15
+OP43  C14 C13 C15
+OP44  C14 C13 C15
+[chiral]
+H4 C14 C13  O4 C15
+[out]
+O5  C15 C14 C16
+P5  C15 C14 C16
+OP52  C15 C14 C16
+HP52  C15 C14 C16
+OP53  C15 C14 C16
+OP54  C15 C14 C16
+[chiral]
+H5 C15 C14 C16  O5
+[out]
+O6  C16 C15 C11
+HO6  C16 C15 C11
+[chiral]
+H6 C16 C15  O6 C11
+

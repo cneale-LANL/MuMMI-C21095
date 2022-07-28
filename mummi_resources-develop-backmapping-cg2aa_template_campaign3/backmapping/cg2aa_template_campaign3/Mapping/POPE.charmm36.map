@@ -1,0 +1,169 @@
+; Chris Neale, 2020
+; POPE
+;
+; NH3-PO4-GL1-C1A-D2A-C3A-C4A   (sn-2) <- in AA, the SN-2 chain has C23-C218
+;         |
+;         GL2-C1B-C2B-C3B-C4B   (sn-1) <- in AA, the SN-1 chain has C33-C316
+
+[ molecule ]
+POPE
+
+[ martini ]
+NH3 PO4 GL1 GL2 C1A D2A C3A C4A C1B C2B C3B C4B 
+
+[ mapping ]
+charmm27 charmm36 
+
+[ atoms ]
+    1     N   NH3
+    2   HN1   NH3
+    3   HN2   NH3
+    4   HN3   NH3
+    5   C12   NH3 NH3 NH3 PO4
+    6  H12A   NH3 NH3 NH3 PO4
+    7  H12B   NH3 NH3 NH3 PO4
+    8   C11   NH3 PO4
+    9  H11A   NH3 PO4
+   10  H11B   NH3 PO4
+   11     P   PO4
+   12   O13   PO4
+   13   O14   PO4
+   14   O12   PO4 PO4 PO4 NH3
+   15   O11   PO4 PO4 GL1
+   16    C1   GL1 GL1 PO4
+   17    HA   GL1 GL1 PO4
+   18    HB   GL1 GL1 PO4
+   19    C2   GL1 GL1 GL2
+   20    HS   GL1 GL1 GL2
+   21   O21   GL1 GL1 GL2 C1A
+   22   C21   GL1 C1A
+   23   O22   GL1
+   24   C22   C1A C1A GL1 
+   25   H2R   C1A C1A GL1
+   26   H2S   C1A C1A GL1
+   27    C3   GL2 GL2 GL2 PO4
+   28    HX   GL2 GL2 GL2 PO4
+   29    HY   GL2 GL2 GL2 PO4
+   30   O31   GL2
+   31   C31   GL2 GL1 C1B
+   32   O32   GL2
+   33   C32   C1B C1B GL2
+   34   H2X   C1B C1B GL2
+   35   H2Y   C1B C1B GL2
+; SN-2 tail
+   36   C23   C1A
+   37   H3R   C1A
+   38   H3S   C1A
+   39   C24   C1A C1A C1A D2A
+   40   H4R   C1A C1A C1A D2A 
+   41   H4S   C1A C1A C1A D2A
+   42   C25   C1A D2A
+   43   H5R   C1A D2A
+   44   H5S   C1A D2A
+   45   C26   D2A D2A D2A C1A
+   46   H6R   D2A D2A D2A C1A
+   47   H6S   D2A D2A D2A C1A
+   48   C27   D2A
+   49   H7R   D2A
+   50   H7S   D2A
+   51   C28   D2A D2A D2A C3A
+   52   H8R   D2A D2A D2A C3A
+   53   H8S   D2A D2A D2A C3A
+   54   C29   D2A D2A C3A
+   55   H91   D2A C3A
+   56  C210   C3A C3A D2A
+   57  H101   D2A C3A
+   58  C211   C3A C3A C3A D2A
+   59  H11R   C3A C3A C3A D2A
+   60  H11S   C3A C3A C3A D2A
+   61  C212   C3A
+   62  H12R   C3A
+   63  H12S   C3A
+   64  C213   C3A C3A C3A C4A
+   65  H13R   C3A C3A C3A C4A
+   66  H13S   C3A C3A C3A C4A
+   67  C214   C3A C4A
+   68  H14R   C3A C4A
+   69  H14S   C3A C4A
+   70  C215   C4A C4A C4A C3A
+   71  H15R   C4A C4A C4A C3A
+   72  H15S   C4A C4A C4A C3A
+   73  C216   C4A
+   74  H16R   C4A
+   75  H16S   C4A
+   76  C217   C4A
+   77  H17R   C4A
+   78  H17S   C4A
+   79  C218   C4A
+   80  H18R   C4A
+   81  H18S   C4A
+   82  H18T   C4A
+; SN-1 tail
+   83   C33   C1B
+   84   H3X   C1B
+   85   H3Y   C1B
+   86   C34   C1B C1B C2B
+   87   H4X   C1B C1B C2B
+   88   H4Y   C1B C1B C2B
+   89   C35   C1B C2B
+   90   H5X   C1B C2B
+   91   H5Y   C1B C2B
+   92   C36   C2B C2B C1B
+   93   H6X   C2B C2B C1B
+   94   H6Y   C2B C2B C1B
+   95   C37   C2B 
+   96   H7X   C2B
+   97   H7Y   C2B
+   98   C38   C2B C2B C2B C3B
+   99   H8X   C2B C2B C2B C3B
+  100   H8Y   C2B C2B C2B C3B
+  101   C39   C2B C2B C3B
+  102   H9X   C2B C2B C3B
+  103   H9Y   C2B C2B C3B
+  104  C310   C3B C2B 
+  105  H10X   C3B C2B
+  106  H10Y   C3B C2B
+  107  C311   C3B C3B C2B
+  108  H11X   C3B C3B C2B
+  109  H11Y   C3B C3B C2B
+  110  C312   C3B
+  111  H12X   C3B
+  112  H12Y   C3B
+  113  C313   C3B C3B C4B
+  114  H13X   C3B C3B C4B
+  115  H13Y   C3B C3B C4B
+  116  C314   C4B C3B
+  117  H14X   C4B C3B
+  118  H14Y   C4B C3B
+  119  C315   C4B C4B C3B
+  120  H15X   C4B C4B C3B
+  121  H15Y   C4B C4B C3B
+  122  C316   C4B
+  123  H16X   C4B
+  124  H16Y   C4B
+  125  H16Z   C4B
+
+; glycerol R stereoisomer
+[  chiral ]
+ HS   C2  O21   C1   C3
+
+; acyl esters
+[ trans]
+C22 C21 O21 C2
+[ out ]
+O22 C21 O21 C22
+[ trans ]
+C32 C31 O31 C3
+[ out ]
+O32 C31 O31 C32
+
+; Extend C17 and C18 on sn-2 oleoyl because C16, C17, and C18 are built in the same place
+[ trans ]
+C217 C216 C215 C214
+H17R C216 C215 C214
+H17S C216 C215 C214
+C218 C217 C216 C215
+H18R C217 C216 C215
+H18S C217 C216 C215
+H18T C217 C216 C215
+

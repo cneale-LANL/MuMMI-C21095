@@ -1,0 +1,11 @@
+[ molecule ]
+MG
+
+[ martini ]
+MG
+
+[ mapping ]
+charmm36
+
+[ atoms ]
+    1    MG   MG
