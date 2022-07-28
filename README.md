@@ -8,4 +8,7 @@ The software will be useful to study systems with interaction potentials that de
 
 We include modified code from: https://github.com/Tsjerk/Backward , which is described in the following publication: https://pubs.acs.org/doi/10.1021/ct400617g We also include a patch that modifies open-source gromacs software version 2019.6, which can be downloaded here: https://manual.gromacs.org/documentation/2019.6/download.html
 
-The entire MuMMI code relies on software beyond that listed here. The code listed here relies on: - open-source gromacs software version 2019.6, which can be downloaded here: https://manual.gromacs.org/documentation/2019.6/download.html - unmodified MDAnalysis python libraries: https://github.com/MDAnalysis/mdanalysis
+The entire MuMMI code relies on software beyond that listed here. The code listed here relies on: 
+- open-source gromacs software version 2019.6, which can be downloaded here: https://manual.gromacs.org/documentation/2019.6/download.html 
+- unmodified MDAnalysis python libraries: https://github.com/MDAnalysis/mdanalysis
+
